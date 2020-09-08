@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script crossorigin="anonymous"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<h1 class="alert alert-success">Password Generator</h1><br>
+<div class="container text-center">
+    <table class="alert alert-warning">
+        <thead>
+        <th><h5 class="alert alert-info">Companies Data </h5></th>
+        <th><h5 class="alert alert-info">Login Password Generator</h5></th>
+        </thead>
+        <tr>
+            <td>
+                <table>
+                    <thead >
+                    <th><h5>Company</h5></th>
+                    </th>
+                    <th><h5>Website</h5></th>
+                    </th>
+                    <th><h5>Username</h5></th>
+                    </th>
+                    <th><h5>Password</h5></th>
+                    </th>
+                    </thead>
+                    <tr>
+                        <td><h6>Apple</h6></td>
+                        <td><a href="https://www.apple.com/mac/">https://www.apple.com/mac/</a></td>
+                        <td>{{username}}</td>
+                        <td>{{password}}</td>
+                    </tr>
+                    <tr>
+                        <td><h6>Apple</h6></td>
+                        <td><a href="https://www.apple.com/mac/">https://www.apple.com/mac/</a></td>
+                        <td>{{username}}</td>
+                        <td>{{password}}</td>
+                    </tr>
+                    <tr>
+                        <td><h6>Apple</h6></td>
+                        <td><a href="https://www.apple.com/mac/">https://www.apple.com/mac/</a></td>
+                        <td>{{username}}</td>
+                        <td>{{password}}</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+
+                <table>
+                    <thead>
+                    <th>
+                        <label><h6>Select Password Attributes </h6></label>
+                    </thead>
+                    </th>
+                    <form action="{% url 'password' %}">
+                        <tr>
+                            <td>
+                                <select name="length">
+                                    <option value="04">04 character long</option>
+                                    <option value="05">05 character long</option>
+                                    <option value="06">06 character long</option>
+                                    <option value="07">07 character long</option>
+                                    <option value="08">08 character long</option>
+                                    <option value="09">09 character long</option>
+                                    </h6>
+                                    <option value="10">10 character long</option>
+                                    <option value="11">11 character long</option>
+                                    <option selected="selected" value="12">12 character long</option>
+                                    <option value="13">13 character long</option>
+                                    <option value="14">14 character long</option>
+                                    <option value="15">15 character long</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="uppercase" type="checkbox"/>
+                                <label name="uppercase">UpperCase</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="number" type="checkbox"/>
+                                <label name="uppercase">Number</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="specialCharacter" type="checkbox"/>
+                                <label name="uppercase">Special Character</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="btn btn-primary" type="submit" value="Generate Password"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="alert alert-primary">
+    <a class="btn btn-success" href="{% url 'home' %}">Home</a>
+    <a class="btn btn-success" href="{% url 'password' %}">YourPassword</a>
+    <a class="btn btn-success" href="{% url 'about' %}">About</a>
+</div>
+
+</body>
+</html>
